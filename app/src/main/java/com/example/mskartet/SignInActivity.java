@@ -1,4 +1,11 @@
 package com.example.mskartet;
 
+import android.os.Bundle;
+
 public class SignInActivity extends MainActivity {
+
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_signin);
+    }
 }

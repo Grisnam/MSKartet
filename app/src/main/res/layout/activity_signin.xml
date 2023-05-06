@@ -21,7 +21,7 @@
         android:textColor="@color/white"
         android:textSize="35dp"
         android:textStyle="bold"
-        android:id="@+id/logginn"
+        android:id="@+id/logginn"/>
 
 
     <EditText
@@ -49,7 +49,7 @@
         android:layout_margin="10dp"
         android:layout_marginTop="134dp"
         android:layout_marginBottom="10dp"
-        android:background="#50fffff"
+        android:background="#00000"
         android:drawableLeft="@drawable/baseline_info_24"
         android:drawablePadding="20dp"
         android:hint="Passord"
@@ -63,7 +63,7 @@
         android:id="@+id/logginnbtn"
         android:layout_below="@id/Passord"
         android:text="Logg inn"
-        android:backgroundTint="@color/black"
+        android:backgroundTint="@color/black"/>
 
 
 
