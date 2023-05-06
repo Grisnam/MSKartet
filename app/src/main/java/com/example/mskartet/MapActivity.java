@@ -118,6 +118,13 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         googleMap.addMarker(new MarkerOptions()
                 .position(magnor)
                 .title("Magnor Motorcross"));
+
+        LatLng eidskog = new LatLng(59.955019, 12.175973);
+        googleMap.addMarker(new MarkerOptions()
+                .position(eidskog)
+                .title("Eidskog MX"));
+
+
     }
 
     public void startActivityMain(View view) {
