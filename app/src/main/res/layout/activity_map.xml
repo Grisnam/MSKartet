@@ -15,4 +15,14 @@
         app:layout_constraintRight_toRightOf="parent"
         android:name="com.google.android.gms.maps.SupportMapFragment"/>
 
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="48dp"
+        android:layout_height="44dp"
+        android:background="#00000000"
+        app:srcCompat="@drawable/baseline_settings_24"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="6dp"
+        android:onClick="startActivityMain"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
