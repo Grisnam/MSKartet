@@ -10,8 +10,8 @@
         android:layout_width="1277dp"
         android:layout_height="1248dp"
         app:srcCompat="@drawable/cross"
-        tools:layout_editor_absoluteX="-363dp"
-        tools:layout_editor_absoluteY="-207dp" />
+        tools:layout_editor_absoluteX="-473dp"
+        tools:layout_editor_absoluteY="-210dp" />
 
     <Button
         android:id="@+id/button2"
