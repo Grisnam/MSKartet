@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:text="Logg inn"
         tools:layout_editor_absoluteX="153dp"
-        tools:layout_editor_absoluteY="615dp" />
+        tools:layout_editor_absoluteY="619dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
