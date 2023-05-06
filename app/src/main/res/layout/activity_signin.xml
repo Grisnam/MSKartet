@@ -21,7 +21,7 @@
         android:textColor="@color/white"
         android:textSize="35dp"
         android:textStyle="bold"
-        android:id="@+id/logginn"/>
+        android:id="@+id/logginn"
 
 
     <EditText
@@ -33,7 +33,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
-        android:background="#9AA6A6"
+        android:background="#50fffff"
         android:drawableLeft="@drawable/baseline_person_24"
         android:drawablePadding="20dp"
         android:hint="Brukernavn"
@@ -46,16 +46,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/BrukerNavn"
-        android:layout_margin="10dp"
-        android:layout_marginTop="134dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
-        android:background="#00000"
+        android:background="#50fffff"
         android:drawableLeft="@drawable/baseline_info_24"
         android:drawablePadding="20dp"
         android:hint="Passord"
         android:padding="20dp"
         android:textColor="@color/white"
-        android:textColorHint="@color/white" />
+        android:textColorHint="@color/white"
+        android:inputType="textPassword"/>
 
     <com.google.android.material.button.MaterialButton
         android:layout_width="wrap_content"
@@ -63,7 +65,60 @@
         android:id="@+id/logginnbtn"
         android:layout_below="@id/Passord"
         android:text="Logg inn"
-        android:backgroundTint="@color/black"/>
+        android:backgroundTint="@color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Glemtpassord"
+        android:text="Glemt Passord?"
+        android:textColor="@color/white"
+        android:layout_below="@id/logginnbtn"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/others"
+        android:text="Eller logg inn med sosiale medier"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/socialicons"
+        android:textColor="@color/white"/>
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_alignParentBottom="true"
+         android:gravity="center"
+         android:id="@+id/socialicons">
+
+         <ImageView
+             android:layout_width="48dp"
+             android:layout_height="48dp"
+             android:src="@drawable/google"
+             android:layout_margin="20dp">
+         <ImageView
+             android:layout_width="48dp"
+             android:layout_height="48dp"
+             android:src="@drawable/facern"
+             android:layout_margin="20dp">
+         <ImageView
+             android:layout_width="48dp"
+             android:layout_height="48dp"
+             android:src="@drawable/twitter"
+             android:layout_margin="20dp">
+
+
+
+     </LinearLayout>
+
+
+        
+
+
+
 
 
 
