@@ -56,13 +56,13 @@ public class WeekActivity extends AppCompatActivity implements CalendarAdapter.O
 
     public void previousMonthAction(View view)
     {
-        CalendarUtils.selectedDate = CalendarUtils.selectedDate.minusMonths(1);
+        CalendarUtils.selectedDate = CalendarUtils.selectedDate.minusWeeks(1);
         setMonthView();
     }
 
     public void nextMonthAction(View view)
     {
-        CalendarUtils.selectedDate = CalendarUtils.selectedDate.plusMonths(1);
+        CalendarUtils.selectedDate = CalendarUtils.selectedDate.plusWeeks(1);
         setMonthView();
     }
 
