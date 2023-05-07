@@ -1,30 +1,30 @@
 package com.example.mskartet;
 
 
+import static com.example.mskartet.CalendarUtils.daysInMonthArray;
 import static com.example.mskartet.CalendarUtils.monthYearFromDate;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import java.time.LocalDate;
-import java.time.YearMonth;
-import java.time.format.DateTimeFormatter;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import org.threeten.bp.LocalDate;
+
 import java.util.ArrayList;
-
-import static com.example.mskartet.CalendarUtils.daysInMonthArray;
-import static com.example.mskartet.CalendarUtils.monthYearFromDate;
 
 public class WeekActivity extends AppCompatActivity implements CalendarAdapter.OnItemListener
 {
+
+
     private TextView monthYearText;
     private RecyclerView calendarRecyclerView;
+
 
 
     @Override
@@ -35,6 +35,9 @@ public class WeekActivity extends AppCompatActivity implements CalendarAdapter.O
         initWidgets();
         CalendarUtils.selectedDate = LocalDate.now();
         setMonthView();
+        Intent intent = new Intent(this, WeekViewActivity.class);
+        startActivity(intent);
+
     }
 
     private void initWidgets()

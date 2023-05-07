@@ -10,32 +10,38 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.button.MaterialButton;
 
+import java.util.HashMap;
+
 public class SignInActivity extends AppCompatActivity {
+
+    private HashMap<String, String> users = new HashMap<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signin);
 
-        TextView username =(TextView) findViewById(R.id.username);
-        TextView password =(TextView) findViewById(R.id.password);
+        users.put("admin", "admin");
+        users.put("user1", "pass1");
+        users.put("user2", "pass2");
+        // Add more usernames and passwords as necessary
 
-        MaterialButton loginbtn = (MaterialButton) findViewById(R.id.loginbtn);
+        TextView username = findViewById(R.id.username);
+        TextView password = findViewById(R.id.password);
 
-        //admin and admin
+        MaterialButton loginbtn = findViewById(R.id.loginbtn);
 
         loginbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Declare the intent variable outside the if statement
-                Intent intent;
+                String inputUsername = username.getText().toString();
+                String inputPassword = password.getText().toString();
 
-                if(username.getText().toString().equals("admin") && password.getText().toString().equals("admin")){
+                if(users.containsKey(inputUsername) && users.get(inputUsername).equals(inputPassword)){
                     //correct
                     Toast.makeText(SignInActivity.this,"LOGIN SUCCESSFUL",Toast.LENGTH_SHORT).show();
 
-                    // Assign the intent a value inside the if statement
-                    intent = new Intent(SignInActivity.this, WeekActivity.class);
+                    Intent intent = new Intent(SignInActivity.this, WeekActivity.class);
                     startActivity(intent);
                 } else {
                     //incorrect
@@ -44,8 +50,6 @@ public class SignInActivity extends AppCompatActivity {
             }
         });
     }
-
-
 }
 
 

@@ -1,24 +1,21 @@
 package com.example.mskartet;
 
+import static com.example.mskartet.CalendarUtils.daysInWeekArray;
 import static com.example.mskartet.CalendarUtils.monthYearFromDate;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import java.time.LocalDate;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import org.threeten.bp.LocalDate;
+
 import java.util.ArrayList;
-
-import static com.example.mskartet.CalendarUtils.daysInMonthArray;
-import static com.example.mskartet.CalendarUtils.daysInWeekArray;
-import static com.example.mskartet.CalendarUtils.monthYearFromDate;
 
 public class WeekViewActivity extends AppCompatActivity implements CalendarAdapter.OnItemListener
 {

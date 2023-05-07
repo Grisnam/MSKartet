@@ -12,6 +12,10 @@ import androidx.annotation.Nullable;
 
 import java.util.List;
 
+
+
+
+
 public class EventAdapter extends ArrayAdapter<Event>
 {
     public EventAdapter(@NonNull Context context, List<Event> events)
