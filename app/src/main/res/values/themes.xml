@@ -2,6 +2,6 @@
 <resources>
     xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.MSKartet" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="Theme.MSKartet" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
     </style>
 </resources>
