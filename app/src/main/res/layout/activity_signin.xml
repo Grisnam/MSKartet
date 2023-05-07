@@ -2,17 +2,20 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/bakgrunn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:scaleType="fitXY"
-        app:srcCompat="@drawable/grisnam_dirt_sand_with_tire_tracks_6452ed38_8764_4336_aeb2_0c734c3adcb6" />
+        app:srcCompat="@drawable/grisnam_dirt_sand_with_tire_tracks_6452ed38_8764_4336_aeb2_0c734c3adcb6"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
 
-    <TextView
+        <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="50dp"
@@ -21,39 +24,37 @@
         android:textColor="@color/white"
         android:textSize="35dp"
         android:textStyle="bold"
-        android:id="@+id/logginn"
+        android:id="@+id/login"/>
 
 
     <EditText
-        android:id="@+id/BrukerNavn"
+        android:id="@+id/username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/logginn"
+        android:layout_below="@+id/login"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
-        android:background="#50fffff"
         android:drawableLeft="@drawable/baseline_person_24"
         android:drawablePadding="20dp"
-        android:hint="Brukernavn"
+        android:hint="username"
         android:padding="20dp"
         android:textColor="@color/white"
         android:textColorHint="@color/white" />
 
     <EditText
-        android:id="@+id/Passord"
+        android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/BrukerNavn"
+        android:layout_below="@+id/username"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
-        android:background="#50fffff"
         android:drawableLeft="@drawable/baseline_info_24"
         android:drawablePadding="20dp"
-        android:hint="Passord"
+        android:hint="password"
         android:padding="20dp"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
@@ -62,8 +63,8 @@
     <com.google.android.material.button.MaterialButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/logginnbtn"
-        android:layout_below="@id/Passord"
+        android:id="@+id/loginbtn"
+        android:layout_below="@id/password"
         android:text="Logg inn"
         android:backgroundTint="@color/black"
         android:layout_centerHorizontal="true"
@@ -71,54 +72,12 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/Glemtpassord"
+        android:id="@+id/forgotpassword"
         android:text="Glemt Passord?"
         android:textColor="@color/white"
-        android:layout_below="@id/logginnbtn"
+        android:layout_below="@id/loginbtn"
         android:layout_centerHorizontal="true"
         android:layout_margin="20dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/others"
-        android:text="Eller logg inn med sosiale medier"
-        android:layout_centerHorizontal="true"
-        android:layout_above="@+id/socialicons"
-        android:textColor="@color/white"/>
-
-     <LinearLayout
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:layout_alignParentBottom="true"
-         android:gravity="center"
-         android:id="@+id/socialicons">
-
-         <ImageView
-             android:layout_width="48dp"
-             android:layout_height="48dp"
-             android:src="@drawable/google"
-             android:layout_margin="20dp">
-         <ImageView
-             android:layout_width="48dp"
-             android:layout_height="48dp"
-             android:src="@drawable/facern"
-             android:layout_margin="20dp">
-         <ImageView
-             android:layout_width="48dp"
-             android:layout_height="48dp"
-             android:src="@drawable/twitter"
-             android:layout_margin="20dp">
-
-
-
-     </LinearLayout>
-
-
-        
-
-
-
 
 
 
