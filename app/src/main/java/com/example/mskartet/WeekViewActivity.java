@@ -1,5 +1,7 @@
 package com.example.mskartet;
 
+import static com.example.mskartet.CalendarUtils.monthYearFromDate;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -14,9 +16,9 @@ import android.widget.Toast;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-import static codewithcal.au.calendarappexample.CalendarUtils.daysInMonthArray;
-import static codewithcal.au.calendarappexample.CalendarUtils.daysInWeekArray;
-import static codewithcal.au.calendarappexample.CalendarUtils.monthYearFromDate;
+import static com.example.mskartet.CalendarUtils.daysInMonthArray;
+import static com.example.mskartet.CalendarUtils.daysInWeekArray;
+import static com.example.mskartet.CalendarUtils.monthYearFromDate;
 
 public class WeekViewActivity extends AppCompatActivity implements CalendarAdapter.OnItemListener
 {

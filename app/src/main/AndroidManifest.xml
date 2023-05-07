@@ -13,8 +13,6 @@
         android:theme="@style/Theme.MSKartet"
         tools:targetApi="31" >
 
-        <activity android:name=".EventEditActivity">
-        <activity android:name=".WeekViewActivity" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -37,6 +35,15 @@
             android:name=".SignInActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
+        <activity android:name=".EventEditActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".WeekViewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".WeekActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
