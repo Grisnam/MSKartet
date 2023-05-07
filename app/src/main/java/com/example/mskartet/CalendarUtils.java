@@ -1,15 +1,16 @@
 package com.example.mskartet;
 
-import org.threeten.bp.DayOfWeek;
+import com.google.firebase.firestore.ServerTimestamp;
 import org.threeten.bp.LocalDate;
 import org.threeten.bp.LocalTime;
 import org.threeten.bp.YearMonth;
 import org.threeten.bp.format.DateTimeFormatter;
+import org.threeten.bp.DayOfWeek;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 public class CalendarUtils {
-
 
     public static LocalDate selectedDate;
 
@@ -18,8 +19,7 @@ public class CalendarUtils {
         return date.format(formatter);
     }
 
-    public static String formattedTime(LocalTime time)
-    {
+    public static String formattedTime(LocalTime time) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("hh:mm:ss a");
         return time.format(formatter);
     }
@@ -71,4 +71,21 @@ public class CalendarUtils {
 
         return null;
     }
+
+    public static class EventData {
+        public String name;
+        public long date;
+        public String time;
+        @ServerTimestamp
+        public Date timestamp;
+
+        public EventData() {}
+
+        public EventData(String name, long date, String time) {
+            this.name = name;
+            this.date = date;
+            this.time = time;
+        }
+    }
+
 }
