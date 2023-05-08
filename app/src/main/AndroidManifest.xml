@@ -34,15 +34,6 @@
             android:name=".SignInActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
-        <activity android:name=".EventEditActivity"
-            android:exported="false"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".WeekViewActivity"
-            android:exported="false"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".WeekActivity"
-            android:exported="false"
-            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

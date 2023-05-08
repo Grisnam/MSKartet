@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "600121015527",
+    "project_id": "mskartet-4c110",
+    "storage_bucket": "mskartet-4c110.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:600121015527:android:97ccdee0bb541b5221b642",
+        "android_client_info": {
+          "package_name": "com.example.mskartet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "600121015527-impaopfl948vn96tmujsdkotmn0sobe3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBN6-gXXTTVs4vKO4PF5NSrMa71nIyHh-g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "600121015527-impaopfl948vn96tmujsdkotmn0sobe3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

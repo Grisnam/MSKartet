@@ -41,7 +41,7 @@ public class SignInActivity extends AppCompatActivity {
                     //correct
                     Toast.makeText(SignInActivity.this,"LOGIN SUCCESSFUL",Toast.LENGTH_SHORT).show();
 
-                    Intent intent = new Intent(SignInActivity.this, WeekActivity.class);
+                    Intent intent = new Intent(SignInActivity.this, MainActivity.class);
                     startActivity(intent);
                 } else {
                     //incorrect
