@@ -24,7 +24,7 @@ public class SignInActivity extends AppCompatActivity {
         users.put("admin", "admin");
         users.put("user1", "pass1");
         users.put("user2", "pass2");
-        // Add more usernames and passwords as necessary
+        // Legg til flere brukernavn og passord
 
         TextView username = findViewById(R.id.username);
         TextView password = findViewById(R.id.password);
