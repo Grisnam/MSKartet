@@ -15,7 +15,7 @@
 
     <EditText
         android:id="@+id/description_edittext"
-        android:hint="Enter description here"
+        android:hint="Skriv beskrivelse her:"
         android:inputType="textMultiLine"
         android:maxLines="5"
         android:layout_width="match_parent"
@@ -28,7 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:text="Availability" />
+        android:text="Tilgjengelighet" />
 
     <LinearLayout
         android:orientation="vertical"
@@ -49,11 +49,11 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="Monday" />
+                android:text="Mandag" />
 
             <EditText
                 android:id="@+id/monday_time"
-                android:hint="Enter time"
+                android:hint="Klokkeslett"
                 android:inputType="text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -70,11 +70,11 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="Tuesday" />
+                android:text="Tirsdag" />
 
             <EditText
                 android:id="@+id/tuesday_time"
-                android:hint="Enter time"
+                android:hint="Klokkeslett"
                 android:inputType="text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -91,11 +91,11 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="Wednesday" />
+                android:text="Onsdag" />
 
             <EditText
                 android:id="@+id/wednesday_time"
-                android:hint="Enter time"
+                android:hint="Klokkeslett"
                 android:inputType="text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -111,11 +111,11 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="Thursday" />
+                android:text="Torsdag" />
 
             <EditText
                 android:id="@+id/thursday_time"
-                android:hint="Enter time"
+                android:hint="Klokkeslett"
                 android:inputType="text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -132,11 +132,11 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="Friday" />
+                android:text="Fredag" />
 
             <EditText
                 android:id="@+id/friday_time"
-                android:hint="Enter time"
+                android:hint="Klokkeslett"
                 android:inputType="text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -153,11 +153,11 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="Saturday" />
+                android:text="Lørdag" />
 
             <EditText
                 android:id="@+id/saturday_time"
-                android:hint="Enter time"
+                android:hint="Klokkeslett"
                 android:inputType="text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -174,11 +174,11 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="Sunday" />
+                android:text="Søndag" />
 
             <EditText
                 android:id="@+id/sunday_time"
-                android:hint="Enter time"
+                android:hint="Klokkeslett"
                 android:inputType="text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -188,7 +188,7 @@
 
     <Button
         android:id="@+id/save_btn"
-        android:text="Save"
+        android:text="Lagre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
