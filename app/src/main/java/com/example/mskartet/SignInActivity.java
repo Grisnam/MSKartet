@@ -31,6 +31,7 @@ public class SignInActivity extends AppCompatActivity {
         users.put("KongsvingerMotorklubb", "pass2");
         users.put("HaslemoenMotorcrossbane", "pass2");
         users.put("StarmoenMotorsenter", "pass2");
+
         users.put("BøverlundMotorcrossbane", "pass2");
         users.put("ÅlMotorCrossbane", "pass2");
         users.put("FuglehaugenMotorCrossbane", "pass2");
