@@ -1,10 +1,10 @@
 package com.example.mskartet;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.content.Intent;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -21,7 +21,7 @@ public class SignInActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signin);
 
-        users.put("admin", "admin");
+        users.put("LunnerMotorsport", "admin");
         users.put("user1", "pass1");
         users.put("user2", "pass2");
         // Legg til flere brukernavn og passord
@@ -41,7 +41,8 @@ public class SignInActivity extends AppCompatActivity {
                     //correct
                     Toast.makeText(SignInActivity.this,"LOGIN SUCCESSFUL",Toast.LENGTH_SHORT).show();
 
-                    Intent intent = new Intent(SignInActivity.this, MainActivity.class);
+                    Intent intent = new Intent(SignInActivity.this, DescriptionActivity.class);
+                    intent.putExtra("username", inputUsername); // Pass the username to the DescriptionActivity
                     startActivity(intent);
                 } else {
                     //incorrect
@@ -51,6 +52,4 @@ public class SignInActivity extends AppCompatActivity {
         });
     }
 }
-
-
 
