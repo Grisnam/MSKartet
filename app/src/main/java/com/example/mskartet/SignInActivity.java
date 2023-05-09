@@ -21,10 +21,28 @@ public class SignInActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signin);
 
-        users.put("LunnerMotorsport", "admin");
-        users.put("user1", "pass1");
-        users.put("user2", "pass2");
+        users.put("LunnerMotorsport", "pass2");
+        users.put("JevnakerMotorklubb", "pass2");
+        users.put("GjerdrumMotorklubb", "pass2");
+        users.put("EnebakkMotorsportklubb", "pass2");
+        users.put("BunesIdrettslaget", "pass2");
+        users.put("LierMotorsportklubb", "pass2");
+        users.put("GardermoenMotorcrossbane", "pass2");
+        users.put("KongsvingerMotorklubb", "pass2");
+        users.put("HaslemoenMotorcrossbane", "pass2");
+        users.put("StarmoenMotorsenter", "pass2");
+        users.put("BøverlundMotorcrossbane", "pass2");
+        users.put("ÅlMotorCrossbane", "pass2");
+        users.put("FuglehaugenMotorCrossbane", "pass2");
+        users.put("ValdresMotorCross", "pass2");
+        users.put("Stor-ElvdalMotorCross", "pass2");
+        users.put("NMKTrysilMotorCross&Bilcross", "pass2");
+        users.put("SlettholenMotorcross", "pass2");
+        users.put("MagnorMotorcross", "pass2");
+        users.put("EidskogMX", "pass2");
+
         // Legg til flere brukernavn og passord
+        //må også legge til flere lokasjoner og collection i firestore/firebase
 
         TextView username = findViewById(R.id.username);
         TextView password = findViewById(R.id.password);

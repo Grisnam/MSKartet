@@ -12,18 +12,18 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.SetOptions;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class DescriptionActivity extends AppCompatActivity {
 
     private FirebaseFirestore db;
-    private FirebaseAuth mAuth;
     private EditText descriptionField;
     private EditText[] timeFields;
     private TextView usernameTextView;
@@ -38,7 +38,6 @@ public class DescriptionActivity extends AppCompatActivity {
         usernameTextView.setText(username);
 
         db = FirebaseFirestore.getInstance();
-        mAuth = FirebaseAuth.getInstance();
 
         usernameTextView = findViewById(R.id.username);
         descriptionField = findViewById(R.id.description_edittext);
@@ -52,25 +51,23 @@ public class DescriptionActivity extends AppCompatActivity {
         timeFields[5] = findViewById(R.id.saturday_time);
         timeFields[6] = findViewById(R.id.sunday_time);
 
-
-
         Button saveBtn = findViewById(R.id.save_btn);
         saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String description = descriptionField.getText().toString();
-                String[] times = new String[6];
+                List<String> times = new ArrayList<>();
 
                 for (int i = 0; i < 7; i++) {
-                    times[i] = timeFields[i].getText().toString();
+                    times.add(timeFields[i].getText().toString());
                 }
 
                 Map<String, Object> data = new HashMap<>();
                 data.put("description", description);
                 data.put("times", times);
 
-                String userId = mAuth.getCurrentUser().getUid();
-                DocumentReference docRef = db.collection("users").document(userId);
+                String username = getIntent().getStringExtra("username");
+                DocumentReference docRef = db.collection(username).document("user");
                 docRef.set(data, SetOptions.merge())
                         .addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override
