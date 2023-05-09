@@ -26,18 +26,22 @@ public class DescriptionActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private EditText descriptionField;
     private EditText[] timeFields;
-    private TextView username;
+    private TextView usernameTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_description);
 
+        String username = getIntent().getStringExtra("username");
+        TextView usernameTextView = findViewById(R.id.username_textview);
+        usernameTextView.setText(username);
+
         db = FirebaseFirestore.getInstance();
         mAuth = FirebaseAuth.getInstance();
 
-        username = findViewById(R.id.username);
-        descriptionField = findViewById(R.id.description_field);
+        usernameTextView = findViewById(R.id.username);
+        descriptionField = findViewById(R.id.description_edittext);
 
         timeFields = new EditText[7];
         timeFields[0] = findViewById(R.id.monday_time);
@@ -48,7 +52,7 @@ public class DescriptionActivity extends AppCompatActivity {
         timeFields[5] = findViewById(R.id.saturday_time);
         timeFields[6] = findViewById(R.id.sunday_time);
 
-        username.setText(mAuth.getCurrentUser().getEmail());
+
 
         Button saveBtn = findViewById(R.id.save_btn);
         saveBtn.setOnClickListener(new View.OnClickListener() {

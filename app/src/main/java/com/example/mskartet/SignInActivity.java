@@ -41,8 +41,9 @@ public class SignInActivity extends AppCompatActivity {
                     //correct
                     Toast.makeText(SignInActivity.this,"LOGIN SUCCESSFUL",Toast.LENGTH_SHORT).show();
 
+                    String username = inputUsername;
                     Intent intent = new Intent(SignInActivity.this, DescriptionActivity.class);
-                    intent.putExtra("username", inputUsername); // Pass the username to the DescriptionActivity
+                    intent.putExtra("username", username); // replace "username" with whatever key you want to use
                     startActivity(intent);
                 } else {
                     //incorrect
