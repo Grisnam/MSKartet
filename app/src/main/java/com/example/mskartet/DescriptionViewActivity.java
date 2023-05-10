@@ -59,7 +59,7 @@ public class DescriptionViewActivity extends AppCompatActivity {
                 if (task.isSuccessful()) {
                     QuerySnapshot snapshot = task.getResult();
                     if (snapshot.isEmpty()) {
-                        Toast.makeText(DescriptionViewActivity.this, "No data found for the marker.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(DescriptionViewActivity.this, "Ingen informasjon funnet.", Toast.LENGTH_SHORT).show();
                         return;
                     }
 
@@ -74,8 +74,8 @@ public class DescriptionViewActivity extends AppCompatActivity {
                     }
 
                 } else {
-                    Log.e(TAG, "Error getting documents: ", task.getException());
-                    Toast.makeText(DescriptionViewActivity.this, "Error getting data for the marker.", Toast.LENGTH_SHORT).show();
+                    Log.e(TAG, "Error, kan ikke hente dokument: ", task.getException());
+                    Toast.makeText(DescriptionViewActivity.this, "Error, kan ikke hente data fra markør", Toast.LENGTH_SHORT).show();
                 }
             }
         });

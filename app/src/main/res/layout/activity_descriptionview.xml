@@ -36,7 +36,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="8dp"
-            android:text="Monday" />
+            android:text="Mandag" />
 
         <TextView
             android:id="@+id/monday_time_textview"
@@ -49,7 +49,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="8dp"
-            android:text="Tuesday" />
+            android:text="Tirsdag" />
 
         <TextView
             android:id="@+id/tuesday_time_textview"
@@ -62,7 +62,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="8dp"
-            android:text="Wednesday" />
+            android:text="Onsdag" />
 
         <TextView
             android:id="@+id/wednesday_time_textview"
@@ -75,7 +75,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="8dp"
-            android:text="Thursday" />
+            android:text="Torsdag" />
 
         <TextView
             android:id="@+id/thursday_time_textview"
@@ -87,7 +87,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="8dp"
-            android:text="Friday" />
+            android:text="Fredag" />
 
         <TextView
             android:id="@+id/friday_time_textview"
@@ -100,7 +100,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="8dp"
-            android:text="Saturday" />
+            android:text="Lørdag" />
 
         <TextView
             android:id="@+id/saturday_time_textview"
@@ -113,7 +113,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="8dp"
-            android:text="Sunday" />
+            android:text="Søndag" />
 
         <TextView
             android:id="@+id/sunday_time_textview"
