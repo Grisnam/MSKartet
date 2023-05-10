@@ -10,10 +10,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.List;
 
@@ -51,33 +49,32 @@ public class DescriptionViewActivity extends AppCompatActivity {
         // Set the marker name in the usernameTextView
         usernameTextView.setText(markerName);
 
-        // Query the collection with matching marker name
-        CollectionReference markerRef = db.collection(markerName);
-        markerRef.get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                if (task.isSuccessful()) {
-                    QuerySnapshot snapshot = task.getResult();
-                    if (snapshot.isEmpty()) {
-                        Toast.makeText(DescriptionViewActivity.this, "Ingen informasjon funnet.", Toast.LENGTH_SHORT).show();
-                        return;
+        // Query the document with matching marker name
+        db.collection(markerName)
+                .document("user")
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                        if (task.isSuccessful() && task.getResult() != null) {
+                            DocumentSnapshot document = task.getResult();
+                            String description = document.getString("description");
+                            List<String> times = (List<String>) document.get("times");
+
+                            if (times != null && times.size() == 7) {
+                                descriptionTextView.setText(description);
+
+                                for (int i = 0; i < times.size(); i++) {
+                                    timeTextViews[i].setText(times.get(i));
+                                }
+                            } else {
+                                Toast.makeText(DescriptionViewActivity.this, "ingen info her.", Toast.LENGTH_SHORT).show();
+                            }
+                        } else {
+                            Log.e(TAG, "Error retrieving document: ", task.getException());
+                            Toast.makeText(DescriptionViewActivity.this, "error under henting av markøren", Toast.LENGTH_SHORT).show();
+                        }
                     }
-
-                    DocumentSnapshot document = snapshot.getDocuments().get(0);
-                    String description = document.getString("description");
-                    List<String> times = (List<String>) document.get("times");
-
-                    descriptionTextView.setText(description);
-
-                    for (int i = 0; i < times.size(); i++) {
-                        timeTextViews[i].setText(times.get(i));
-                    }
-
-                } else {
-                    Log.e(TAG, "Error, kan ikke hente dokument: ", task.getException());
-                    Toast.makeText(DescriptionViewActivity.this, "Error, kan ikke hente data fra markør", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
+                });
     }
 }
