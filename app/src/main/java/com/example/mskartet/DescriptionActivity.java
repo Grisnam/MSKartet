@@ -1,5 +1,6 @@
 package com.example.mskartet;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -30,6 +31,17 @@ public class DescriptionActivity extends AppCompatActivity {
     private EditText descriptionField;
     private EditText[] timeFields;
     private TextView usernameTextView;
+
+    public void startActivityMap(View view) {
+        Intent intent = new Intent(this, MapActivity.class);
+        startActivity(intent);
+
+    }
+
+    public void startActivitySignIn(View view) {
+        Intent intent = new Intent(this, SignInActivity.class);
+        startActivity(intent);    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

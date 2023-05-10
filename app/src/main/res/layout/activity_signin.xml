@@ -15,7 +15,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/grisnam_dirt_sand_with_tire_tracks_6452ed38_8764_4336_aeb2_0c734c3adcb6" />
+        app:srcCompat="@drawable/enduro2" />
 
     <TextView
         android:id="@+id/login"
@@ -23,10 +23,10 @@
         android:layout_height="wrap_content"
         android:layout_margin="50dp"
         android:gravity="center"
-        android:text="Logg inn"
+        android:text="Logg Inn"
         android:textColor="@color/white"
         android:textSize="35dp"
-        android:textStyle="bold"
+        android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintLeft_toLeftOf="parent"
