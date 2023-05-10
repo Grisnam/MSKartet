@@ -1,6 +1,7 @@
 package com.example.mskartet;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.SetOptions;
 
@@ -22,6 +24,7 @@ import java.util.List;
 import java.util.Map;
 
 public class DescriptionActivity extends AppCompatActivity {
+    private static final String TAG = "DescriptionActivity";
 
     private FirebaseFirestore db;
     private EditText descriptionField;
@@ -51,6 +54,30 @@ public class DescriptionActivity extends AppCompatActivity {
         timeFields[5] = findViewById(R.id.saturday_time);
         timeFields[6] = findViewById(R.id.sunday_time);
 
+        // Retrieve the data from Firestore
+        DocumentReference docRef = db.collection(username).document("user");
+        docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()) {
+                    DocumentSnapshot document = task.getResult();
+                    if (document.exists()) {
+                        String description = document.getString("description");
+                        List<String> times = (List<String>) document.get("times");
+
+                        // Populate the EditText fields with the retrieved values
+                        descriptionField.setText(description);
+                        for (int i = 0; i < timeFields.length && i < times.size(); i++) {
+                            timeFields[i].setText(times.get(i));
+                        }
+                    }
+                } else {
+                    Log.e(TAG, "Error getting document: ", task.getException());
+                    Toast.makeText(DescriptionActivity.this, "Error retrieving data.", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
         Button saveBtn = findViewById(R.id.save_btn);
         saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,7 +93,6 @@ public class DescriptionActivity extends AppCompatActivity {
                 data.put("description", description);
                 data.put("times", times);
 
-                String username = getIntent().getStringExtra("username");
                 DocumentReference docRef = db.collection(username).document("user");
                 docRef.set(data, SetOptions.merge())
                         .addOnCompleteListener(new OnCompleteListener<Void>() {
