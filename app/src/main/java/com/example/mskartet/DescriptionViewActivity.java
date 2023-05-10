@@ -48,6 +48,9 @@ public class DescriptionViewActivity extends AppCompatActivity {
         // Get the marker name from the Intent extras
         String markerName = getIntent().getStringExtra("markerName");
 
+        // Set the marker name in the usernameTextView
+        usernameTextView.setText(markerName);
+
         // Query the collection with matching marker name
         CollectionReference markerRef = db.collection(markerName);
         markerRef.get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
@@ -61,11 +64,9 @@ public class DescriptionViewActivity extends AppCompatActivity {
                     }
 
                     DocumentSnapshot document = snapshot.getDocuments().get(0);
-                    String username = document.getString("username");
                     String description = document.getString("description");
                     List<String> times = (List<String>) document.get("times");
 
-                    usernameTextView.setText(username);
                     descriptionTextView.setText(description);
 
                     for (int i = 0; i < times.size(); i++) {
