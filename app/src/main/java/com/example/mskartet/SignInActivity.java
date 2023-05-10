@@ -58,7 +58,7 @@ public class SignInActivity extends AppCompatActivity {
 
                 if(users.containsKey(inputUsername) && users.get(inputUsername).equals(inputPassword)){
                     //correct
-                    Toast.makeText(SignInActivity.this,"LOGIN SUCCESSFUL",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignInActivity.this,"Logger Inn!",Toast.LENGTH_SHORT).show();
 
                     String username = inputUsername;
                     Intent intent = new Intent(SignInActivity.this, DescriptionActivity.class);
@@ -66,7 +66,7 @@ public class SignInActivity extends AppCompatActivity {
                     startActivity(intent);
                 } else {
                     //incorrect
-                    Toast.makeText(SignInActivity.this,"LOGIN FAILED !!!",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignInActivity.this,"Feil ved innlogging.",Toast.LENGTH_SHORT).show();
                 }
             }
         });

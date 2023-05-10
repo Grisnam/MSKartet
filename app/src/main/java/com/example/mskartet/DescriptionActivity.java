@@ -73,9 +73,9 @@ public class DescriptionActivity extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {
                                 if (task.isSuccessful()) {
-                                    Toast.makeText(DescriptionActivity.this, "Data saved successfully!", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(DescriptionActivity.this, "Informasjonen ble lagret!", Toast.LENGTH_SHORT).show();
                                 } else {
-                                    Toast.makeText(DescriptionActivity.this, "Error saving data.", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(DescriptionActivity.this, "Kunne ikke lagre informasjon.", Toast.LENGTH_SHORT).show();
                                 }
                             }
                         });
