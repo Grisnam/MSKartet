@@ -108,7 +108,8 @@
         android:layout_height="100dp"
         android:onClick="startActivityMap"
         android:padding="20dp"
-        app:srcCompat="@drawable/baseline_arrow_back_ios_24" />
+        app:srcCompat="@drawable/baseline_arrow_back_ios_24"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
