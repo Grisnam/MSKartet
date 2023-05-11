@@ -16,6 +16,13 @@ public class SignInActivity extends AppCompatActivity {
 
     private HashMap<String, String> users = new HashMap<>();
 
+    public void startActivityMap(View view) {
+        Intent intent = new Intent(this, MapActivity.class);
+        startActivity(intent);
+    }
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
